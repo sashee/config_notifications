@@ -47,7 +47,7 @@ resource "aws_cloudwatch_event_target" "sqs" {
   target_id = "SQS"
   arn       = "${aws_sqs_queue.queue.arn}"
 	sqs_target {
-		message_group_id = aws_sqs_queue.queue.id
+		message_group_id = "1"
 	}
 }
 
